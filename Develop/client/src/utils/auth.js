@@ -1,7 +1,5 @@
-// use this to decode a token and get the user's information out of it
 import decode from 'jwt-decode';
 
-// create a new class to instantiate for a user
 class AuthService {
   // get user data
   getProfile() {
@@ -46,4 +44,5 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+// Export the AuthService class instance as the default module
+export default AuthService.instance = new AuthService();
